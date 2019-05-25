@@ -1,0 +1,616 @@
+/******************************************
+IMPORT
+******************************************/
+
+@font-face {
+    font-family: "Flaticon";
+    src: url("fonts/Flaticon.eot");
+    src: url("fonts/Flaticon.eot?#iefix") format("embedded-opentype"), url("fonts/Flaticon.woff") format("woff"), url("fonts/Flaticon.ttf") format("truetype"), url("fonts/Flaticon.svg#Flaticon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: "Flaticon";
+        src: url("fonts/Flaticon.svg#Flaticon") format("svg");
+    }
+}
+
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+    font-family: Flaticon;
+    font-style: normal;
+}
+
+.flaticon-email:before {
+    content: "\f100";
+}
+
+.flaticon-map-with-position-marker:before {
+    content: "\f101";
+}
+
+.flaticon-share:before {
+    content: "\f102";
+}
+
+.flaticon-html5:before {
+    content: "\f103";
+}
+
+.flaticon-black-graduation-cap-tool-of-university-student-for-head:before {
+    content: "\f104";
+}
+
+.flaticon-computer-tool-for-education:before {
+    content: "\f105";
+}
+
+.flaticon-download-business-statistics-symbol-of-a-graphic:before {
+    content: "\f106";
+}
+
+.flaticon-arrows:before {
+    content: "\f107";
+}
+
+.flaticon-monitor-tablet-and-smartohone:before {
+    content: "\f108";
+}
+
+.flaticon-css-3:before {
+    content: "\f109";
+}
+
+.flaticon-online-course:before {
+    content: "\f10a";
+}
+
+.flaticon-coffee-cup:before {
+    content: "\f10b";
+}
+
+.flaticon-add:before {
+    content: "\f10c";
+}
+
+.flaticon-html-coding:before {
+    content: "\f10d";
+}
+
+
+/******************************************
+SKELETON
+******************************************/
+
+body {
+    background-color: #f6f6f6;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #a2a2a2;
+}
+
+body,
+p,
+li,
+a {
+    font-family: 'Roboto', sans-serif;
+}
+
+.course-details h4 a,
+.readmore,
+.testimonial strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.5;
+}
+
+.cop-logo img,
+a {
+    color: #000;
+    text-decoration: none !important;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
+.check li:before {
+    content: "\f00c";
+    font-family: "FontAwesome";
+    font-size: 16px;
+    left: 0;
+    padding-right: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.check li {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+.check li:last-child {
+    margin-bottom: 0;
+}
+
+.check {
+    margin-left: 0;
+    padding-left: 0
+}
+
+.check li a {}
+
+.authorbox,
+blockquote {
+    border: 0;
+    margin: 30px 0;
+    position: relative;
+    padding: 4rem 3rem;
+    font-family: 'Droid Serif', sans-serif;
+    font-style: italic;
+    border: 1px solid #eaeaea;
+    background-color: #f6f6f6;
+}
+
+blockquote:after {
+    content: "\f10e";
+    padding: 5px;
+    font-family: FontAwesome;
+    position: absolute;
+    bottom: 0px;
+    color: #f6f6f6;
+    font-size: 24px;
+    right: 10px;
+}
+
+blockquote:before {
+    content: "\f10d";
+    padding: 5px;
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    color: #f6f6f6;
+    font-size: 24px;
+    left: 10px;
+}
+
+/************************************
+MICS
+************************************/
+.loader {
+    display: block;
+    margin: 20px auto 0px;
+    vertical-align: middle;
+}
+#preloader {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    z-index: 11000;
+    position: fixed;
+    display: block;
+}
+
+.preloader {
+    position: absolute;
+    margin: 0 auto;
+    left: 1%;
+    right: 1%;
+    top: 47%;
+    width: 65px;
+    height: 65px;
+    background: center center no-repeat none;
+    background-size: 65px 65px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%
+}
+
+/******************************************
+HEADER
+******************************************/
+.topbar {
+    background-color: #000;
+    margin-bottom: 30px;
+    padding: 12px 0 14px;
+}
+
+.topbar a,
+.topbar p {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+}
+
+.topbar .text-left p {
+    margin-top: 3px;
+}
+
+.topbar .text-left i {
+    padding-right: 3px;
+}
+
+.header {
+    position: absolute;
+    z-index: 111;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: 0;
+    background-color: transparent;
+    text-decoration: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.header.without-topbar {
+    padding: 30px 0;
+}
+
+.header-normal {
+    position: relative;
+    padding: 0 0 24px;
+    background-color: #fff;
+}
+
+.header-normal .navbar-default .nav>li>a {
+    color: #848484 !important;
+}
+
+.header.affix {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #000;
+    left: 0;
+    padding: 15px 0;
+    right: 0,
+}
+
+.header.header-normal.affix {
+    background-color: #ffffff;
+}
+
+.header.affix .topbar {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+.navbar-default {
+    margin: 0;
+    background-color: transparent;
+    background: none;
+    border: 0;
+}
+
+.navbar-default .nav>li>a {
+    color: #fff !important;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+}
+
+.navbar-nav .has-submenu .dropdown-menu li a {
+    padding: 14px 20px;
+}
+
+.navbar-default .dropdown-menu {
+    box-shadow: none;
+}
+
+.navbar-default .dropdown-menu li a {
+    color: #222;
+    font-size: 14px;
+}
+
+.navbar-default .fa-angle-right {
+    position: absolute;
+    right: 30px;
+}
+
+.navbar-brand img {
+    margin: 0 !important;
+}
+
+.social a {
+    font-size: 12px;
+    color: #fff !important;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 25px;
+    text-align: center;
+    border-radius: 1px;
+    margin-left: 2px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.social a:hover {
+    opacity: 0.8;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a,
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+    background-color: transparent !important;
+}
+
+.navbar-brand {
+    padding: 0 10px 0 0;
+}
+
+.social a.facebook {
+    background-color: #3b5998;
+}
+
+.social a.pinterest {
+    background-color: #bd081c;
+}
+
+.social a.twitter {
+    background-color: #1da1f2;
+}
+
+.social a.google {
+    background-color: #34a853;
+}
+
+.social a.linkedin {
+    background-color: #0077b5;
+}
+
+.modal {
+    top: 40%;
+    margin: -20px auto;
+}
+
+.modal-backdrop.in {
+    opacity: 1;
+    background: url(images/pattern.png) repeat center center rgba(0, 0, 0, 1);
+}
+
+.modal-header {
+    border-bottom: 0;
+    padding: 15px;
+    background: none;
+}
+
+.modal-content {
+    background-clip: padding-box;
+    background-color: transparent;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: none !important;
+    outline: 0 none;
+    position: relative;
+}
+
+.modal .close {
+    font-size: 13px;
+    height: 40px;
+    padding: 0;
+    position: absolute;
+    right: 14px;
+    top: 27px;
+    width: 40px;
+    z-index: 111;
+    transform: rotate(315deg);
+}
+
+.close,
+.close:focus,
+.close:hover {
+    color: #ffffff;
+    opacity: 1;
+    text-shadow: none;
+}
+
+.modal .form-control {
+    background-color: transparent;
+    background-image: none;
+    border: 0;
+    border-radius: 0;
+    font-family: 'Droid Serif', sans-serif;
+    box-shadow: none;
+    color: #555;
+    display: block;
+    font-size: 16px;
+    line-height: 1.42857;
+    font-style: italic;
+    padding: 6px 12px;
+    width: 100%;
+    border-bottom: 4px solid #222;
+    height: 70px;
+    padding-left: 0;
+}
+
+.iconitem a {
+    padding-left: 8px !important;
+}
+
+/******************************************
+MEGA MENU
+******************************************/
+
+.yamm .nav,
+.yamm .collapse,
+.yamm .dropup,
+.yamm .dropdown {
+    position: static;
+}
+
+.yamm .dropdown.yamm-fw{
+    position: static;
+}
+
+
+.yamm .container {
+    position: relative;
+}
+
+.yamm .dropdown.yamm-fw .dropdown-menu {}
+
+.yamm .dropdown {
+    position: relative;
+}
+
+.hassubmenu .dropdown-menu,
+.yamm .dropdown.yamm-fw.yamm-half .dropdown-menu {
+    left: auto;
+    right: auto;
+}
+
+.yamm h4{
+    font-size: 16px;
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.yamm .dropdown-menu ul {
+    padding: 0 !important;
+    list-style: none;
+}
+
+.yamm .dropdown-menu li {
+    padding: 0px;
+    margin: 10px 0;
+}
+
+.yamm .dropdown-menu li {
+    padding: 0px;
+    margin: 10px 0px;
+}
+
+.yamm .dropdown-menu li a {
+    padding: 0px !important;
+    color: #848484;
+}
+
+.yamm .dropdown-menu li:hover a{
+    padding-left: 10px !important;
+    background-color: transparent;
+}
+
+.yamm-fw .dropdown-menu li:hover a {
+    padding-left: 0 !important;
+}
+
+.yamm .dropdown .dropdown-menu {
+    border-radius: 0px;
+    margin-top: 30px;
+    min-width: 200px;
+}
+
+.yamm .dropdown .dropdown-menu {
+    border-radius: 0;
+    border-top: 3px solid #ddd;
+    background-color: #fff !important;
+    margin-top: 24px;
+    padding: 20px 30px;
+}
+
+.header.affix .yamm .dropdown .dropdown-menu {
+    margin-top: 15px !important;
+}
+
+.yamm .dropdown .dropdown-menu .show-left {
+    margin-top: 0
+}
+
+.yamm ul {
+    padding: 0;
+}
+
+.menu-widget {
+    padding: 0 10px;
+}
+
+.menu-widget img {
+    border-radius: 6px 6px 0 0;
+}
+
+.menu-widget small {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu-widget h5, .menu-widget h5 a{
+    font-size: 16px !important;
+    font-weight:  700;
+    margin: 0px !important;
+    padding: 10px 0px 5px !important;
+    color: #000 !important;
+}
+
+.menu-widget h5,
+.menu-widget h5 a {
+    font-size: 16px !important;
+    font-weight: 700;
+    margin: 0 !important;
+    padding: 10px 0 5px !important;
+    color: #000 !important;
+}
+
+.yamm .dropdown-menu li:hover .menu-button,
+.yamm .dropdown-menu li .menu-button {
+    border-radius: 0 !important;
+    font-size: 13px !important;
+    border: 1px solid #fff;
+    font-weight: bold;
+    color: #ffffff !important;
+    display: block;
+    background-color: #111;
+    padding: 5px 20px !important;
+    max-width: 140px;
+    margin: 10px auto 0;
+    text-transform: capitalize;
+}
+
+/******************************************
+SECTIONS
+******************************************/
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background: url(images/pattern.png) repeat center center rgba(0, 0, 0, 0.7);
+}
+
+
+
+/******************************************
+PAGES
+******************************************/
